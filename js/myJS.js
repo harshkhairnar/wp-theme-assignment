@@ -5,9 +5,12 @@
  */
 jQuery(document).ready(function(){
     jQuery('#parent-100').show();
+    jQuery('.parent_click:first-of-type').addClass('active');
    jQuery('.parent_click').click(function(){
        var id = "#parent-" + jQuery(this).attr('data-id');
        jQuery('.child-right').hide();
+       jQuery(this).parent().find('li').removeClass('active');
        jQuery(id).show();
+       jQuery(this).addClass('active');
    }); 
 });

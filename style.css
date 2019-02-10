@@ -614,7 +614,7 @@ Lsyout
 
 .col-1 { width: 960px; }
 .col-2 { width: 960px; }
-.col-3 { width: 23.4% }
+.col-3 { width: 23.8% }
 .col-4 { width: 29%; }
 .col-5 { width: 960px; }
 .col-6 { width: 480px; }
@@ -682,35 +682,85 @@ Header
      position: relative;
      margin: auto;
      width:960px;
+     border: 10px solid #fff;
  }
  .slide-desc{
      background-color: #111;
    position: absolute;
   right: 0px;
-  width: 315px;
+  width: 335px;
   height:293px;
-  margin-top: -299px;
-  margin-right: 34px;
+  margin-top: -293px;
+  margin-right: 0px;
   
     opacity: 0.6;
   filter: alpha(opacity=60);
   padding:21px 36px;
  }
+ .slide {
+     line-height: 0;
+ }
   .slide-desc .slider-title{
       font-size: 24px;    
       font-family: Georgia;
      color:#fff;
+     line-height: 1.5;
   }  
   .slide-desc .slider-content{
          
   font-size: 14px;    
       font-family: Tahoma;
      color:#fff;
+     line-height: 1.5;
   }
-      
   
- 
- 
+  .pager-container {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 33px;
+    height: 100%;
+    color: #f00;
+    z-index: 9999;
+    border-left: 1px solid #fff;
+    
+}
+.cycle-pager {
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.cycle-pager span {
+    width: 12px;
+    display: block;
+    background: url("./img/slider-pages.png") no-repeat -38px 0;
+    text-indent: -10000px;
+}
+.cycle-pager span:hover, .cycle-pager span.cycle-pager-active {
+    background-position: 0 0;
+    cursor: pointer;
+}
+.cycle-next, .cycle-prev {
+    display: block;
+    width: 20px;
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    z-index: 9999;
+}
+.cycle-next {
+    top: 7px;
+    background: url("./img/slider-top-pagination.png") no-repeat 0 0;
+}
+.cycle-prev {
+    bottom: 2px;
+    background: url("./img/slider-bottom-pagination.png") no-repeat 0 0;
+}
+.cycle-next:hover {
+    background: url("./img/slider-top-pagination-hov.png") no-repeat 0 0;
+}
+.cycle-prev:hover {
+    background: url("./img/slider-bottom-pagination-hov.png") no-repeat 0 0;
+} 
 
  /* main content down*/
  .home-content{
@@ -725,42 +775,62 @@ Header
  }
  .child-container .child-left{
      
-     width:300px;
+     width:285px;
      float:left;
-     padding:5px;
      
      
  }
  .child-container .child-left ul{
      font-family: Georgia;
      font-size: 17px;
-     color:#993408;
+     
      list-style: none;
      margin: 0;
+     padding: 0;
  }
-  .child-container .child-left ul :hover{
+  .child-container .child-left ul li:hover,   .child-container .child-left ul li.active{
    color:#fff;
+   background-image: url("./img/sidebar-title-bg.png");
+   
+   cursor:pointer;
+   
+  }
+  .child-container .child-left ul li:hover:after, .child-container .child-left ul li.active:after{
+    background-image: url("./img/brown-notch.png");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    width: 17px;
+    height: 29px;
+    position: absolute;
+    top: 0;
+    right: -16px;
+    
   }
    .child-container .child-left ul li{
-   margin: 20px 0;
-   padding:2px;
+   width:94%;
+    margin: 20px 0;
+   padding:2px 20px;
+   color:#993408;
+   position: relative;
    }
  .child-container .child-right{
     border-left:1px solid #ccc;
   margin-right:0;
-  width:658px;
+  width:673px;
   background: #fff;
   float:left;
   display: none;
+  padding: 10px;
  }
  .child-right .grand-child{
    
      float: left;
   width: 33.33%;
-  padding: 10px;
  }
  .grand-child{
-     padding:10px;
+     padding-right:18px;
  }
  .grand-child .title{
      font-family: Geoorgia;
@@ -822,7 +892,7 @@ footer #primary-menu{
 margin-left: 0;
 }
 footer .site-branding {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 footer #primary-menu li a{
     font-size:13px;
@@ -850,6 +920,9 @@ footer #primary-menu li a{
 }
 #secondary .widget {
     margin-right: 15px;
+}
+#secondary .widget:last-of-type {
+    margin-right: 0;
 }
 #secondary .widget h2 {
     text-transform: uppercase;
@@ -1116,11 +1189,6 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
-}
-
-.post,
-.page {
-	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {

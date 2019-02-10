@@ -31,6 +31,9 @@ global $post;
                 <div class="slider-wrapper" >
                     <div class="slider cycle-slideshow"  
         data-cycle-timeout="2000"
+        data-cycle-pager=".cycle-pager"
+        data-cycle-next=".cycle-prev"
+        data-cycle-prev=".cycle-next"   
         data-cycle-slides=".slide"><?php
                     foreach ( $slider_posts as $post ) { 
                         setup_postdata( $post ); ?>
@@ -48,6 +51,12 @@ global $post;
                             </div>
                         </div><?php 
                     } ?>
+                        <div class="pager-container">
+                            <a href="#" class="cycle-prev"></a>
+                            <div class="cycle-pager"></div>
+                            <a href="#" class="cycle-next"></a>
+                        </div>
+                        
                     </div>
                 </div><?php
             }
