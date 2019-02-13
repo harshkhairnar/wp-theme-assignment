@@ -16,3 +16,11 @@ Important Notes:
 You need to create a homepage only. Don't bother about inner-pages styling.
 You must use WordPress "Theme Options Page" for different settings. Do not hard code a lot of stuff.
 Please use https://underscores.me/ starter theme for this challenge
+
+*---------*-----------------*-----------*------------*--------*------------*
+
+1. I used https://underscores.me/ starter theme for this challenge.
+2. Referred from - w3school for css,html,php,jQuery,Bootstrap
+3. Took help of Youtube channels for understanding the concept and implement.
+  (:Thanks to google:)  
+*-------*--------*-------------*--------------*------------*-----------*-----*

@@ -18,7 +18,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="http://malsup.github.com/jquery.cycle2.js"></script>
-        <script src="/wordpress/wp-content/themes/rtcamp/js/myJS.js" type="text/javascript"></script>
+       <script src="/wordpress/wp-content/themes/rtcamp/js/myJS.js" ></script>
+       
+        </script>
+        
 	<?php wp_head(); ?>
 </head>
 
