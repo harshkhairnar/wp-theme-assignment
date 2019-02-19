@@ -29,7 +29,7 @@ global $post;
 
             if( isset($slider_posts)) { ?>
                 <div class="slider-wrapper" >
-                    <div class="slider cycle-slideshow"  
+                    <div class="slider cycle-slideshow full-width"  
         data-cycle-timeout="2000"
         data-cycle-pager=".cycle-pager"
         data-cycle-next=".cycle-prev"
@@ -72,7 +72,7 @@ global $post;
 
             // The Loop
             if ( $child_pages->have_posts() ) {
-                    echo '<div class="home-content clearfix"><div class="child-container clearfix">';
+                    echo '<div class="home-content clearfix"><div class="child-container full-width clearfix">';
                         echo '<div class="child-left">';
                             echo '<ul>';
                             while ( $child_pages->have_posts() ) {
@@ -85,7 +85,7 @@ global $post;
                         
                         foreach($child_ids as $id) {
                             
-                            echo '<div class="child-right" id="parent-'.$id.'">';
+                            echo '<div class="child-right full-width" id="parent-'.$id.'">';
                                 $mypages = get_pages( array( 
                                     'child_of' => $id 
                                     ) 
@@ -93,7 +93,7 @@ global $post;
 
                                 foreach( $mypages as $page ) {		
                                     $content = $page->post_content;
-                                    echo '<div class="grand-child">';
+                                    echo '<div class="grand-child full-width">';
                                         echo '<div class="img">';
                                         echo get_the_post_thumbnail( $page->ID );
                                         echo '</div>';

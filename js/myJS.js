@@ -13,4 +13,6 @@ jQuery(document).ready(function(){
        jQuery(id).show();
        jQuery(this).addClass('active');
    }); 
+   
 });
+

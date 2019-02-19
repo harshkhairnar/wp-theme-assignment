@@ -16,12 +16,14 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
         <script src="http://malsup.github.com/jquery.cycle2.js"></script>
-       <script src="/wordpress/wp-content/themes/rtcamp/js/myJS.js" ></script>
+       <script src="/wp-content/themes/rtcamp/js/myJS.js" ></script>
        
-        </script>
-        
+       
+       
+
+
 	<?php wp_head(); ?>
 </head>
 
@@ -51,7 +53,12 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation col-9">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rtcamp' ); ?></button>
+
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

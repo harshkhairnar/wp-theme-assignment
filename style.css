@@ -640,6 +640,8 @@ Lsyout
     clear: none;
     margin-top: 4%;
 }
+
+
 /*
 Header
 */
@@ -991,7 +993,6 @@ a:hover, a:active {
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -1036,18 +1037,11 @@ a:hover, a:active {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle {
+    display: none;
 }
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+.main-navigation.toggled ul {
+	display: line;
 }
 
 .site-main .comment-navigation, .site-main
@@ -1063,7 +1057,7 @@ a:hover, a:active {
 	float: left;
 	width: 50%;
 }
-
+  
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -1326,4 +1320,84 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+@media (max-width: 768px) {
+        
+	.menu-toggle {
+            display: block;
+            padding: 5px;
+            float:right;
+	}
+        .menu-toggle div {
+                width: 30px;
+                height: 4px;
+                background-color: grey;
+                margin: 4px 0;
+        }
+        header #primary-menu {
+            display: none;
+        }
+	header .toggled #primary-menu {
+            display: block;
+            margin-left: 0;
+            position: absolute;
+            top: 53px;
+            right: 0;
+            background: #eee;
+            z-index: 9999;
+            width: 100%;
+            padding: 15px;
+	}
+        header .toggled #primary-menu li{
+            float:none;
+            margin-left:0px;
+            padding: 5px 20px;
+            text-align: center;
+        }
+        .container{
+            width:100%;
+        }
+        .main-navigation.col-9 {
+            width: 12%;
+            float: right;
+            margin: 10px 15px 0 0;
+        }
+        .site-branding {
+            width: 41%;
+            margin-left: 15px;
+        }
+        .full-width {
+            width: 100% !important;
+            max-width: 100%;
+        }
+        .slide-desc {
+            position: relative;
+            top: auto;
+            right: auto;
+            height: auto;
+            width: auto;
+            margin: 10px 0 0 0;
+        }
+        .pager-container {
+            display: none;
+        }
+        #secondary .widget {
+            margin: 0px 20px;
+        }
+        footer #primary-menu li {
+            float: none;
+            margin: 0;
+            text-align: center;
+            padding: 5px 0;
+        }
+        footer .bg {
+            background: none;
+        }
+        .copy {
+            text-align: center;
+        }
+        footer .site-branding img {
+            width: 80%;
+        }
 }

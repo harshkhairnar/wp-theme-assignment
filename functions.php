@@ -118,7 +118,7 @@ function rtcamp_widgets_init() {
 		'name'          => esc_html__( 'Footer Sidebar', 'rtcamp' ),
 		'id'            => 'sidebar-footer',
 		'description'   => esc_html__( 'Add widgets here.', 'rtcamp' ),
-		'before_widget' => '<section id="%1$s" class="widget col-3 %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget col-3 full-width %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -141,6 +141,8 @@ function rtcamp_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'rtcamp_scripts' );
+
+
 
 /**
  * Implement the Custom Header feature.
